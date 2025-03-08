@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   }
-//esconde os spans inicialmente
+  //esconde os spans inicialmente
   toggleSpanVisibility();
 
   navBar.addEventListener("mouseenter", () => {
@@ -75,4 +75,30 @@ document.addEventListener("DOMContentLoaded", function () {
       span.style.opacity = "hidden";
     });
   });
+});
+
+
+//filter
+//isotopo jQuery
+$(document).ready(
+  function () {
+    $(".grid").isotope({
+      itemSelector: ".item",
+    });
+
+    $(".filterGroup").on("click", "li", function (){
+      var filterValue = $(this).attr("data-filter");
+      $(".grid").isotope({filter: filterValue});
+      $(".filterGroup li").removeClass("active");
+      $(this).addClass("active");
+    });
+  }
+);
+
+
+
+
+//inicializacao AOS fades
+AOS.init({
+duration
 });
