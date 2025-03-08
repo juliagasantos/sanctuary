@@ -99,6 +99,6 @@ $(document).ready(
 
 
 //inicializacao AOS fades
-AOS.init({
-duration
-});
+// AOS.init({
+// duration
+// });
